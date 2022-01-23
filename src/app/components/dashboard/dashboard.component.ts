@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BridgeService } from '../../services/bridge.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  constructor(private bridgeService: BridgeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bridgeService.getInfo().subscribe((info) => {
+      console.log(info);
+    });
+  }
 }

@@ -1,6 +1,6 @@
 # HueControl
 
-Control Philips Hue lights with a web app.
+Control Philips Hue lights with a web app. \
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
 ## Configuration

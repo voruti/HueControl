@@ -7,8 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DevComponent } from './dev/dev.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DevComponent } from './components/dev/dev.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DevComponent } from './dev/dev.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
