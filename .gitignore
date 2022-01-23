@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/git,node,linux,windows,visualstudiocode,angular
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,node,linux,windows,visualstudiocode,angular
 
@@ -252,7 +251,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/git,node,linux,windows,visualstudiocode,angular
 
-
 # Compiled output
 /dist
 /tmp
@@ -293,7 +291,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
 
 # custom
 config.json
