@@ -76,7 +76,8 @@
               "browserTarget": "hue-control:build:production"
             },
             "development": {
-              "browserTarget": "hue-control:build:development"
+              "browserTarget": "hue-control:build:development",
+              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"
