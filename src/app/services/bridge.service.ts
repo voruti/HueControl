@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
@@ -7,11 +7,21 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class BridgeService {
-  private apiUrl: string = `https://${environment.bridgeHost}/api/${environment.username}`;
+  private v2api: string = `https://${environment.hueBridge}/clip/v2`;
+  private applicationKey: string = environment.applicationKey;
+
+  private options = {
+    headers: new HttpHeaders({
+      'hue-application-key': this.applicationKey,
+    }),
+  };
 
   constructor(private httpClient: HttpClient) {}
 
-  public getInfo(): Observable<string> {
-    return this.httpClient.get<string>(this.apiUrl);
+  public getAllLights(): Observable<string> {
+    return this.httpClient.get<string>(
+      this.v2api + '/resource/light',
+      this.options
+    );
   }
 }

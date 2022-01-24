@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
   constructor(private bridgeService: BridgeService) {}
 
   ngOnInit(): void {
-    this.bridgeService.getInfo().subscribe((info) => {
+    this.bridgeService.getAllLights().subscribe((info) => {
       console.log(info);
     });
   }
