@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class BridgeService {
-  // private v2api: string = `https://${environment.hueBridge}/clip/v2`;
+  // private v2api: string = `https://${environment.bridgeIp}/clip/v2`;
   private v2api: string = `http://localhost:4200/clip/v2`; // temporary; for development
   private applicationKey: string = environment.applicationKey;
 
