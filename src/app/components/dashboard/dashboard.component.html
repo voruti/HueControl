@@ -1,3 +1,15 @@
-<div>
-  <p>dashboard works!</p>
+<div class="flex">
+  <mat-card *ngFor="let light of lights">
+    <mat-card-header>
+      <mat-card-title>{{ light.metadata.name }}</mat-card-title>
+      <mat-card-subtitle>{{ light.id_v1 }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content *ngIf="isAcknowledgementLight(light)"
+      >Needs acknowledgement</mat-card-content
+    >
+    <mat-card-actions>
+      <button mat-raised-button color="primary">On</button>
+      <button mat-stroked-button color="accent">Off</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

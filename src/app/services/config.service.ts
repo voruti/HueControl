@@ -5,6 +5,7 @@ import { lastValueFrom } from 'rxjs';
 export interface Config {
   bridgeIp: string;
   applicationKey: string;
+  acknowledgementLights: string[];
 }
 
 @Injectable({
@@ -14,7 +15,11 @@ export class ConfigService {
   public config: Config;
 
   constructor(private httpClient: HttpClient) {
-    this.config = { bridgeIp: '', applicationKey: '' };
+    this.config = {
+      bridgeIp: '',
+      applicationKey: '',
+      acknowledgementLights: [],
+    };
   }
 
   loadConfig(): Promise<void> {

@@ -8,11 +8,11 @@ export interface Metadata {
    * Light archetype.
    * @deprecated Use archetype on device level.
    */
-  archetype: LightArchetype;
+  archetype?: LightArchetype;
 
   /**
    * Human readable name of a resource. \
    * minLength: 1 – maxLength: 32
    */
-  name: string;
+  name?: string;
 }

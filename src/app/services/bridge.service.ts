@@ -7,6 +7,8 @@ import { LightGet } from '../model/hue/lightGet';
 import { Response } from '../model/hue/response';
 import { ConfigService } from './config.service';
 import { WINDOW } from '../providers/window.providers';
+import { ResourceIdentifierPut } from '../model/hue/resourceIdentifierPut';
+import { LightPut } from '../model/hue/lightPut';
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +35,28 @@ export class BridgeService {
     return this.httpClient
       .get<Response<LightGet>>(this.v2api + '/resource/light', this.options)
       .pipe(catchError(this.handleError<LightGet>('getAllLights')));
+  }
+
+  public putLightById(
+    id: string,
+    jsonBody: LightPut
+  ): Observable<Response<ResourceIdentifierPut>> {
+    return this.httpClient
+      .put<Response<ResourceIdentifierPut>>(
+        `${this.v2api}/resource/light/${id}`,
+        jsonBody,
+        this.options
+      )
+      .pipe(
+        catchError(this.handleError<ResourceIdentifierPut>('putLightById'))
+      );
+  }
+
+  public turnLightOn(
+    id: string,
+    on: boolean = true
+  ): Observable<Response<ResourceIdentifierPut>> {
+    return this.putLightById(id, { on: { on: on } });
   }
 
   /**

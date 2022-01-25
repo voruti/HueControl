@@ -13,5 +13,5 @@ export interface Gradient {
   /**
    * Number of color points that gradient lamp is capable of showing with gradience.
    */
-  points_capable: number;
+  points_capable?: number;
 }

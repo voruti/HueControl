@@ -8,20 +8,26 @@ export interface Dynamics {
    * In case of status none, the speed is not valid. \
    * minimum: 0 – maximum: 1
    */
-  speed: number;
+  speed?: number;
 
   /**
    * Current status of the lamp with dynamics.
    */
-  status: DynamicsStatus;
+  status?: DynamicsStatus;
 
   /**
    * Statuses in which a lamp could be when playing dynamics.
    */
-  status_values: SupportedDynamicStatus[];
+  status_values?: SupportedDynamicStatus[];
 
   /**
    * Indicates whether the value presented in speed is valid.
    */
-  speed_valid: boolean;
+  speed_valid?: boolean;
+
+  /**
+   * Duration of a light transition in ms. Accuracy is in 100ms steps. \
+   * maximum: 6000000
+   */
+  duration?: number;
 }

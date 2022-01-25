@@ -4,5 +4,5 @@ export interface SimpleColor {
   /**
    * CIE XY gamut position.
    */
-  xy: XYGamut;
+  xy?: XYGamut;
 }

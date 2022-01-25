@@ -1,4 +1,8 @@
 {
   "bridgeIp": "ip",
-  "applicationKey": "abcdef"
+  "applicationKey": "abcdef",
+  "acknowledgementLights": [
+    "TV power",
+    "uuid"
+  ]
 }

@@ -9,6 +9,7 @@ Configuration values go into `src/assets/config.json` (use `_config.json` as tem
 
 1. `bridgeIp`: The IP of your Philips Hue Bridge.
 2. `applicationKey`: The application key (previously username) to authorize on the Hue Bridge.
+3. `acknowledgementLights`: Lights (either their v2 API ID or their name) that need extra confirmation to prevent accidental activation.
 
 A CORS proxy is currently needed to access the Hue v2 API. An example Nginx configuration can be found at `nginx/_nginx.conf`. See also [next paragraph](#docker):
 

@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-card {
+  margin: 5px;
+}
+
+.mat-card-content {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.mat-card-actions > .mat-button-base {
+  text-transform: uppercase;
+}
