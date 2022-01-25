@@ -8,8 +8,16 @@
       >Needs acknowledgement</mat-card-content
     >
     <mat-card-actions>
-      <button mat-raised-button color="primary">On</button>
-      <button mat-stroked-button color="accent">Off</button>
+      <button mat-raised-button color="primary" (click)="wishLightOn(light)">
+        On
+      </button>
+      <button
+        mat-stroked-button
+        color="accent"
+        (click)="wishLightOn(light, false)"
+      >
+        Off
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

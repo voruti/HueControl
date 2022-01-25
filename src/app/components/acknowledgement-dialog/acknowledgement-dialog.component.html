@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Acknowledgement needed</h1>
+<mat-dialog-content>
+  <p>Confirm your action by entering "{{ data.name }}":</p>
+  <mat-form-field>
+    <mat-label>{{ data.name }}</mat-label>
+    <input
+      matInput
+      [formControl]="userInputFormControl"
+      cdkFocusInitial
+      [pattern]="generatePattern(data.name)"
+      required
+    />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <!-- could be improved by disabling confirm button on *any* error: -->
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="onConfirmClick()"
+    type="submit"
+    [disabled]="
+      userInputFormControl.hasError('pattern') ||
+      userInputFormControl.hasError('required')
+    "
+  >
+    Confirm
+  </button>
+  <button mat-stroked-button color="accent" (click)="onCancelClick()">
+    Cancel
+  </button>
+</mat-dialog-actions>
