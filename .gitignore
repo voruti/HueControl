@@ -295,3 +295,4 @@ Thumbs.db
 # custom
 src/assets/config.json
 src/proxy.conf.js
+nginx/nginx.conf
