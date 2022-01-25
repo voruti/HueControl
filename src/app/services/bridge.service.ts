@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { LightGet } from '../model/hue/lightGet';
 import { Response } from '../model/hue/response';
@@ -27,8 +26,7 @@ export class BridgeService {
   constructor(
     private httpClient: HttpClient,
     private configService: ConfigService,
-    @Inject(WINDOW) private window: Window,
-    private matSnackBar: MatSnackBar
+    @Inject(WINDOW) private window: Window
   ) {
     this.v2api = `${this.window.location.origin}/clip/v2`; // using CORS proxy
   }
@@ -68,8 +66,6 @@ export class BridgeService {
    */
   private handleError<S>(operation = 'operation') {
     return (error: any): Observable<Response<S>> => {
-      this.matSnackBar.open(`${operation} failed:\n${error.message}`, 'Close');
-
       // Let the app keep running by returning an empty result.
       return of({
         errors: [{ description: error.message }],

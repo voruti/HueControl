@@ -71,7 +71,12 @@ export class DashboardComponent implements OnInit {
   private turnLightOn(light: LightGet, on: boolean = true): void {
     this.bridgeService.turnLightOn(light.id, on).subscribe((response) => {
       if (response.errors.length === 0 && response.data.length > 0) {
-        this.matSnackBar.open('Executed', undefined, { duration: 1000 });
+        this.matSnackBar.open('Success', undefined, { duration: 1000 });
+      } else if (response.errors.length > 0) {
+        this.matSnackBar.open(
+          response.errors.map((error) => error.description).join('\n'),
+          'Close'
+        );
       }
     });
   }
