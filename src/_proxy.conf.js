@@ -1,6 +1,6 @@
 const PROXY_CONFIG = {
   "/clip/v2": {
-    "target": `https://${process.env.HUECONTROL_BRIDGE_IP}`,
+    "target": "https://[ip]",
     "secure": false,
     "changeOrigin": true
   }

@@ -293,4 +293,5 @@ testem.log
 Thumbs.db
 
 # custom
-config.json
+src/assets/config.json
+src/proxy.conf.js

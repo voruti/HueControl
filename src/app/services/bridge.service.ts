@@ -3,25 +3,27 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-import { environment } from '../../environments/environment';
 import { LightGet } from '../model/hue/lightGet';
 import { Response } from '../model/hue/response';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BridgeService {
-  // private v2api: string = `https://${environment.bridgeIp}/clip/v2`;
-  private v2api: string = `http://localhost:4200/clip/v2`; // temporary; for development
-  private applicationKey: string = environment.applicationKey;
+  // private v2api: string = `https://${this.configService.config.bridgeIp}/clip/v2`;
+  private v2api: string = `http://localhost:4200/clip/v2`; // temporary; for development - using CORS proxy
 
   private options = {
     headers: new HttpHeaders({
-      'hue-application-key': this.applicationKey,
+      'hue-application-key': this.configService.config.applicationKey,
     }),
   };
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private configService: ConfigService
+  ) {}
 
   public getAllLights(): Observable<Response<LightGet>> {
     return this.httpClient

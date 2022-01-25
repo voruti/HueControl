@@ -4,8 +4,6 @@
 
 export const environment = {
   production: false,
-  bridgeIp: process.env.HUECONTROL_BRIDGE_IP,
-  applicationKey: process.env.HUECONTROL_APPLICATION_KEY,
 };
 
 /*

@@ -3,12 +3,16 @@
 Control Philips Hue lights with a web app. \
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Environment variables
+## Configuration
 
-- `HUECONTROL_BRIDGE_IP`: The IP of your Philips Hue Bridge.
-- `HUECONTROL_APPLICATION_KEY`: The application key (previously username) to authorize on the Hue Bridge.
+Configuration values go into `src/assets/config.json` (use `_config.json` as template).
+
+1. `bridgeIp`: The IP of your Philips Hue Bridge.
+2. `applicationKey`: The application key (previously username) to authorize on the Hue Bridge.
 
 ## Development server
+
+A CORS proxy is currently needed to access the Hue v2 API; add your bridge's IP in `src/proxy.conf.js` (use `_proxy.conf.js` as template).
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
