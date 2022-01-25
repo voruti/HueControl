@@ -15,7 +15,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DevComponent } from './components/dev/dev.component';
 import { ConfigService } from './services/config.service';
 import { WINDOW_PROVIDERS } from './providers/window.providers';
 import { AcknowledgementDialogComponent } from './components/acknowledgement-dialog/acknowledgement-dialog.component';
@@ -28,7 +27,6 @@ export const configFactory = (configService: ConfigService) => {
   declarations: [
     AppComponent,
     DashboardComponent,
-    DevComponent,
     AcknowledgementDialogComponent,
   ],
   imports: [
