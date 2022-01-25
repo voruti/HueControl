@@ -7,7 +7,8 @@
 !tsconfig.app.json
 !angular.json
 !.browserslistrc
-!nginx/
+# supply Nginx config at runtime as long as the CORS proxy is used (i. e. it's commented out here)
+# !nginx/
 
 src/assets/*config.json
 src/*proxy.conf.js

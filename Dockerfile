@@ -15,6 +15,7 @@ FROM nginx:stable-alpine
 
 EXPOSE 80
 
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+# supply Nginx config at runtime as long as the CORS proxy is used (i. e. it's commented out here)
+# COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=builder /home/node/app/dist/hue-control/ /usr/share/nginx/html/
