@@ -49,3 +49,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [ ] Add a way of generating a new application key
 - [ ] Masonry for dashboard
 - [ ] First deploy
+- [ ] Tests
