@@ -50,3 +50,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [ ] Masonry for dashboard
 - [ ] First deploy
 - [ ] Tests
+- [ ] Add icons for the lights on the dashboard
