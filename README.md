@@ -51,3 +51,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [ ] First deploy
 - [ ] Tests
 - [ ] Add icons for the lights on the dashboard
+- [ ] Add a way to obtain the v2 API ID of a light for adding it to the config
