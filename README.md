@@ -38,10 +38,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Some Todos
 
 - [ ] Add a proper 404 site
-- [ ] Show the current status of the device (on, off, maybe unavailable). The needed data should already be there. https://material.angular.io/components/button-toggle/overview
+- [ ] Show the current status of the device (on, off, maybe unavailable). The needed data should already be there. <https://material.angular.io/components/button-toggle/overview>
 - [ ] Add favicon
 - [ ] Why do I sometimes (when opening "wrong urls") get a response from my router?
-- [ ] https://developers.meethue.com/forum/forum/t/api-v2-cors-header-access-control-allow-origin-missing/6602
+- [ ] <https://developers.meethue.com/forum/forum/t/api-v2-cors-header-access-control-allow-origin-missing/6602>
 - [ ] Add a way of generating a new application key
 - [ ] Masonry for dashboard
 - [ ] First deploy
