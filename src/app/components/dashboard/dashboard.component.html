@@ -8,16 +8,19 @@
       >Needs acknowledgement</mat-card-content
     >
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="wishLightOn(light)">
-        On
-      </button>
-      <button
-        mat-stroked-button
-        color="accent"
-        (click)="wishLightOn(light, false)"
+      <mat-button-toggle-group
+        name="toggleLightPower"
+        aria-label="Toggle light or power"
+        [value]="light.on.on ? 'on' : 'off'"
       >
-        Off
-      </button>
+        <mat-button-toggle value="on" (click)="wishLightOn(light)"
+          >On</mat-button-toggle
+        >
+        <mat-button-toggle value="off" (click)="wishLightOn(light, false)"
+          >Off</mat-button-toggle
+        >
+        <mat-button-toggle value="unknown">Unknown</mat-button-toggle>
+      </mat-button-toggle-group>
     </mat-card-actions>
   </mat-card>
 </div>
