@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 export interface DialogData {
   name: string;
@@ -12,7 +12,7 @@ export interface DialogData {
   styleUrls: ['./acknowledgement-dialog.component.scss'],
 })
 export class AcknowledgementDialogComponent {
-  public userInputFormControl: FormControl = new FormControl();
+  public userInputFormControl: UntypedFormControl = new UntypedFormControl();
 
   constructor(
     private dialogRef: MatDialogRef<AcknowledgementDialogComponent, boolean>,
