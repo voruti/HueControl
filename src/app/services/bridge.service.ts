@@ -9,6 +9,7 @@ import { ConfigService } from './config.service';
 import { WINDOW } from '../providers/window.providers';
 import { ResourceIdentifierPut } from '../model/hue/resourceIdentifierPut';
 import { LightPut } from '../model/hue/lightPut';
+import { ResponseType } from '../model/hue/responseType';
 
 @Injectable({
   providedIn: 'root',
@@ -64,7 +65,7 @@ export class BridgeService {
    * Let the app continue.
    * @param operation - name of the operation that failed
    */
-  private handleError<S>(operation = 'operation') {
+  private handleError<S extends ResponseType>(operation = 'operation') {
     return (error: any): Observable<Response<S>> => {
       // Let the app keep running by returning an empty result.
       return of({
